@@ -1,0 +1,27 @@
+RATE MONOTONIC SCHEDULING
+Priority Order: T1 > T2 > T3
+CPU Utilization: 65.00%
+RMS Sufficient Utilization Bound: 77.98%
+Sufficient-Bound Test: PASS
+
+GANTT CHART (ms)
+| T1 [0-1] | T2 [1-2] | T3 [2-4] | T1 [4-5] | T2 [5-6] |
+| IDLE [6-8] | T1 [8-9] | IDLE [9-10] | T2 [10-11] | T3 [11-12] |
+| T1 [12-13] | T3 [13-14] | IDLE [14-15] | T2 [15-16] | T1 [16-17] |
+| IDLE [17-20] |
+
+TASK INSTANCE RESULTS (ms)
+Task   Release  Deadline  Completion  Status
+T1           0         4           1  MET
+T2           0         5           2  MET
+T3           0        10           4  MET
+T1           4         8           5  MET
+T2           5        10           6  MET
+T1           8        12           9  MET
+T2          10        15          11  MET
+T3          10        20          14  MET
+T1          12        16          13  MET
+T2          15        20          16  MET
+T1          16        20          17  MET
+
+Deadline Misses: 0
